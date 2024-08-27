@@ -1,0 +1,47 @@
+/* style.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #967373;
+    margin: 0;
+}
+
+.chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 50px); /* 8 columns, each 50px */
+    grid-template-rows: repeat(8, 50px); /* 8 rows, each 50px */
+    gap: 0;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+}
+
+.square:nth-child(odd) {
+    background-color: #eee;
+}
+
+.square:nth-child(even) {
+    background-color: #333;
+}
+
+/* Adjustments for correct color alternation */
+.square:nth-child(8n+1),
+.square:nth-child(8n+3),
+.square:nth-child(8n+5),
+.square:nth-child(8n+7) {
+    background-color: #333;
+}
+
+.square:nth-child(8n+2),
+.square:nth-child(8n+4),
+.square:nth-child(8n+6),
+.square:nth-child(8n+8) {
+    background-color: #eee;
+}
+login page code in css html
